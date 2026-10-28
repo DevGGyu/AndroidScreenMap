@@ -1,0 +1,24 @@
+{
+  "_comment": "Example configuration. Only the keys that differ from the defaults are needed; `python3 -m screenmap config examples/sample-app` prints the merged result.",
+  "title": "Notes — Screen Map",
+  "ignore_scheme_prefixes": ["sdk"],
+  "deeplink": {
+    "_comment": "host → LinkMapper.createLinkData(target = …) → mapFromLinkData → Route → Navigator.navigate → Launcher → ScreenHelper → Activity",
+    "mapper_file": "link/LinkMapper.kt",
+    "host_fn": "createLinkData",
+    "target_fn": "mapFromLinkData",
+    "target_param": "target",
+    "host_const_object": "LinkConst",
+    "route_file": "link/Route.kt",
+    "route_class": "Route",
+    "navigator_file": "link/Navigator.kt",
+    "navigate_fn": "navigate",
+    "launcher_file": "link/Launcher.kt",
+    "launcher_var": "launcher",
+    "helper_file": "link/ScreenHelper.kt",
+    "helper_object": "ScreenHelper",
+    "engine_refs": ["Navigator"],
+    "when_indent": 12,
+    "engine_desc": "LinkMapper → Navigator: every entry point (deeplink, push, in-app link) goes through this facade."
+  }
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+out/
+macos/*.app
+*.egg-info/
+build/
+dist/
+.DS_Store
